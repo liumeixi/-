@@ -1,0 +1,5 @@
+# Git ignore
+.git/
+.DS_Store
+Thumbs.db
+*.log
