@@ -26,13 +26,46 @@
         .video-grid-main .side-videos .video-container { margin-bottom: 0; }
         .video-grid-main .side-videos .video-title { font-size: 12px; padding: 10px 12px; }
         .video-grid-2col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
-        .video-grid-2col .video-container { margin-bottom: 0; }
+        .video-grid-2col .video-container { margin-bottom: 0; aspect-ratio: 16/9; }
+        .video-grid-2col .video-container video { width: 100%; height: 100%; object-fit: cover; }
         .video-grid-2col .video-title { font-size: 12px; padding: 10px 12px; }
         
         .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .image-item { aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: #F5F5F5; }
+        .image-item { aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: #F5F5F5; cursor: pointer; }
         .image-item img { width: 100%; height: 100%; object-fit: cover; }
         .image-caption { padding: 10px; font-size: 12px; color: #666; background: #FAFAFA; }
+        
+        .video-container { margin-bottom: 25px; background: #000; border-radius: 8px; overflow: hidden; cursor: pointer; }
+        .video-container video { width: 100%; display: block; }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img, .lightbox video {
+            max-width: 95%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 1001;
+        }
         
         footer { background: #333; color: #999; text-align: center; padding: 20px; font-size: 12px; }
         
@@ -51,28 +84,42 @@
 
     <section class="section">
         <h2 class="section-title">产品展示视频</h2>
-        <div class="video-grid-main">
-            <div class="main-video">
-                <div class="video-container">
-                    <video controls preload="none" poster="产品图/产品摄影.png">
-                        <source src="产品图/jimeng-2026-06-02-5417-近景俯拍镜头微微推焦，聚焦镜头镜片反光，保留相机原版造型不变中近景切咖啡店桌面 ....mp4" type="video/mp4">
-                    </video>
-                    <div class="video-title">复古CCD相机 · 咖啡店场景</div>
-                </div>
+        <div class="video-container" style="margin-bottom: 20px;">
+            <video controls preload="none" poster="产品图/产品摄影.png">
+                <source src="产品图/55555.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">复古CCD相机 · 咖啡店场景</div>
+        </div>
+        <div class="video-grid-2col">
+            <div class="video-container">
+                <video controls preload="none" poster="产品图/产品摄影.png">
+                    <source src="产品图/8888.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">潘婷丝质顺滑洗发露 · 韩系浴室好物</div>
             </div>
-            <div class="side-videos">
-                <div class="video-container">
-                    <video controls preload="none" poster="产品图/产品摄影.png">
-                        <source src="产品图/5月31日.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-title">潘婷丝质顺滑洗发露 · 韩系浴室好物</div>
-                </div>
-                <div class="video-container">
-                    <video controls preload="none" poster="产品图/产品摄影.png">
-                        <source src="产品图/6月2日.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-title">产品展示视频2</div>
-                </div>
+            <div class="video-container">
+                <video controls preload="none" poster="产品图/产品摄影.png">
+                    <source src="产品图/99.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">潘婷护发素 · 柔顺亮泽</div>
+            </div>
+            <div class="video-container">
+                <video controls preload="none" poster="产品图/产品摄影.png">
+                    <source src="产品图/6月2日 (8).mp4" type="video/mp4">
+                </video>
+                <div class="video-title">产品展示视频3</div>
+            </div>
+            <div class="video-container">
+                <video controls preload="none" poster="产品图/产品摄影.png">
+                    <source src="产品图/00.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">产品展示视频4</div>
+            </div>
+            <div class="video-container">
+                <video controls preload="none" poster="产品图/产品摄影.png">
+                    <source src="产品图/c34844a40f601cdecbbfbe94bed761da_raw.mp4" type="video/mp4">
+                </video>
+                <div class="video-title">产品展示视频5</div>
             </div>
         </div>
     </section>
@@ -81,39 +128,39 @@
         <h2 class="section-title">产品图片展示</h2>
         <div class="image-grid">
             <div class="image-item">
-                <img loading="lazy" src="产品图/产品摄影.png" alt="产品摄影">
+                <img loading="lazy" src="产品图/3d55b6356276859c421a4258c2f81cd7.jpg" alt="产品摄影">
                 <div class="image-caption">产品摄影</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/产品摄影 (1).png" alt="产品摄影1">
+                <img loading="lazy" src="产品图/4ac79402b65e9dbd17e8c48cbc0fbe3f.jpg" alt="产品摄影1">
                 <div class="image-caption">产品摄影1</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/产品摄影 (2).png" alt="产品摄影2">
+                <img loading="lazy" src="产品图/6e8a0183a40c7fa00ec294ecaaf54846.jpg" alt="产品摄影2">
                 <div class="image-caption">产品摄影2</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/产品摄影 (3).png" alt="产品摄影3">
+                <img loading="lazy" src="产品图/09f5da039de9715cc9a893be6d59cb47.jpg" alt="产品摄影3">
                 <div class="image-caption">产品摄影3</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/产品摄影 (4).png" alt="产品摄影4">
+                <img loading="lazy" src="产品图/39a8b1462bb047e06158dc172609f075.jpg" alt="产品摄影4">
                 <div class="image-caption">产品摄影4</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/1.png" alt="产品1">
+                <img loading="lazy" src="产品图/49c001b9bdd38656d051bf0576752e67.jpg" alt="产品1">
                 <div class="image-caption">产品1</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/2.jpeg" alt="产品2">
+                <img loading="lazy" src="产品图/56aa3eb6fdf2a34d251ab00b72be4402.jpg" alt="产品2">
                 <div class="image-caption">产品2</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/粉色复古CCD相机产品展示指令.png" alt="CCD相机">
+                <img loading="lazy" src="产品图/665cb14ec9c2883ff29319c4979a82e6.jpg" alt="CCD相机">
                 <div class="image-caption">粉色复古CCD相机</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/粉色复古CCD相机产品展示指令 (1).png" alt="CCD相机1">
+                <img loading="lazy" src="产品图/630177acf3b9a4284ac957835ba663ee.jpg" alt="CCD相机1">
                 <div class="image-caption">粉色复古CCD相机1</div>
             </div>
             <div class="image-item">
@@ -121,48 +168,71 @@
                 <div class="image-caption">空气净化器</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (1).png" alt="净化器1">
+                <img loading="lazy" src="产品图/761822d94c96f320b2f90de710db9feb.jpg" alt="净化器1">
                 <div class="image-caption">宠物友好设计</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (2).png" alt="净化器2">
+                <img loading="lazy" src="产品图/c3b4906028076602f6d061f1e4d07862.jpg" alt="净化器2">
                 <div class="image-caption">多层过滤技术</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (3).png" alt="净化器3">
+                <img loading="lazy" src="产品图/e6dbe108a0148fcc5039382d6e1074c1.jpg" alt="净化器3">
                 <div class="image-caption">卧室清新空气</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/b4c47deef191f2c6d4184d5cd5806520.jpg" alt="图片1">
+                <img loading="lazy" src="产品图/e7175ba465470ad2830223929244ef3d.jpg" alt="图片1">
                 <div class="image-caption">产品图1</div>
             </div>
             <div class="image-item">
-                <img loading="lazy" src="产品图/d2938b4d421e666aebc27ad3b880ffa5.jpg" alt="图片2">
+                <img loading="lazy" src="产品图/ea370b84cdf252c545ce29f53735de65.jpg" alt="图片2">
                 <div class="image-caption">产品图2</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/ff90535d4c14eeab12112c7251782ad4.jpg" alt="图片3">
+                <div class="image-caption">产品图3</div>
             </div>
         </div>
     </section>
 
-    <section class="section">
-        <h2 class="section-title">AI创作视频</h2>
-        <div class="video-grid-2col">
-            <div class="video-container">
-                <video controls preload="none" poster="ai生成视频/天台女/kling_20260530_作品_特写镜头_电影质感__3073_0.png">
-                    <source src="ai生成视频/天台女/5月31日 (1).mp4" type="video/mp4">
-                </video>
-                <div class="video-title">镜头缓慢向前推进 · 电影质感</div>
-            </div>
-            <div class="video-container">
-                <video controls preload="none" poster="ai生成视频/小猫/2f407adcaa0841e8afe2b72cb8982be41780126043931(1).png">
-                    <source src="ai生成视频/小猫/Wan_视频生成_小猫咪从蜷缩状态慢慢舒展身体，先是前爪向前伸，然后站起来，尾巴轻轻摇晃.mp4" type="video/mp4">
-                </video>
-                <div class="video-title">小猫咪舒展身体 · 可爱治愈</div>
-            </div>
-        </div>
-    </section>
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div id="lightbox-content"></div>
+    </div>
 
     <footer>
         <p>&copy; 2024 新媒体运营作品集</p>
     </footer>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxContent = document.getElementById('lightbox-content');
+
+        document.querySelectorAll('.image-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightboxContent.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+                lightbox.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.video-container').forEach(container => {
+            container.addEventListener('click', () => {
+                const video = container.querySelector('video');
+                if (video) {
+                    lightboxContent.innerHTML = `<video controls autoplay><source src="${video.querySelector('source').src}" type="video/mp4"></video>`;
+                    lightbox.classList.add('active');
+                }
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightboxContent.innerHTML = '';
+        }
+    </script>
 </body>
 </html>
