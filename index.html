@@ -2,234 +2,103 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta http-equiv="Cache-Control" content="public, max-age=31536000">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#FF6B9D">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>作品集</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新媒体运营作品集</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
+        header { background: linear-gradient(135deg, #FF6B9D, #C44569); color: white; padding: 40px 20px; text-align: center; }
+        header h1 { font-size: 24px; margin-bottom: 8px; }
+        header p { font-size: 14px; opacity: 0.9; }
+        
+        .section { padding: 30px 20px; max-width: 800px; margin: 0 auto; }
+        .section-title { font-size: 20px; color: #FF6B9D; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFE4EC; }
+        
+        .about-text { font-size: 15px; color: #555; line-height: 1.8; text-indent: 2em; }
+        .about-text p { margin-bottom: 15px; }
+        
+        .video-container { margin-bottom: 25px; background: #000; border-radius: 8px; overflow: hidden; }
+        .video-container video { width: 100%; display: block; }
+        .video-title { padding: 12px 15px; background: #FAFAFA; font-size: 14px; color: #333; }
+        
+        .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .image-item { aspect-ratio: 1; overflow: hidden; border-radius: 8px; }
+        .image-item img { width: 100%; height: 100%; object-fit: cover; }
+        
+        footer { background: #333; color: #999; text-align: center; padding: 20px; font-size: 12px; }
+        
+        @media (max-width: 480px) {
+            header { padding: 30px 15px; }
+            header h1 { font-size: 20px; }
+            .section { padding: 20px 15px; }
+            .image-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">MediaPortfolio</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#hero" class="nav-link">首页</a></li>
-                <li><a href="#about" class="nav-link">关于我</a></li>
-                <li><a href="#product1" class="nav-link">产品展示</a></li>
-                <li><a href="#ai1" class="nav-link">AI创作</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <h1>新媒体运营作品集</h1>
+        <p>故事图文 · 角色扮演 · 产品展示 · AI创作</p>
+    </header>
 
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">新媒体运营作品集</h1>
-            <p class="hero-subtitle"> 产品展示 · AI创作</p>
-            <div class="hero-scroll">
-                <span>向下滚动探索</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-        <div class="hero-bg"></div>
-    </section>
-
-    <section id="product1" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">产品展示视频</h2>
-                <p class="section-desc">视频作品集</p>
-            </div>
-            <div class="video-gallery">
-                <div class="video-card">
-                    <video controls preload="none" poster="产品图/洗发水/产品摄影.png">
-                        <source src="产品图/5月31日.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-info">
-                        <h3>潘婷丝质顺滑洗发露</h3>
-                        <p>韩系浴室好物</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <video controls preload="none" poster="产品图/杯子/产品摄影.png">
-                        <source src="产品图/6月2日.mp4" type="video/mp4">
-                    </video>
-            </div>
+    <section class="section">
+        <h2 class="section-title">关于我</h2>
+        <div class="about-text">
+            <p>我是零基础入门新媒体运营的，靠自学一边学一边练手，自己做了一整套作品集，里面包含了产品展示内容，也尝试用 AI 生成过视频素材。</p>
+            <p>虽然整体做得还比较粗糙，细节和成熟度都还有很多不足，但在做这些内容的过程里，我摸清了从选题、写文案、排版，到视频拍摄剪辑、用 AI 工具辅助创作的完整流程。</p>
+            <p>我学习能力和执行力都不错，也很想深耕这个方向，后续也愿意跟着团队的节奏踏实打磨，快速把自己的内容能力提上来。</p>
         </div>
     </section>
 
-    <section id="product-images" class="section bg-light">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">产品图片展示</h2>
-                <p class="section-desc">产品摄影作品集</p>
-            </div>
-            <div class="product-image-grid">
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/产品摄影.png" alt="产品摄影1">
-                    <span>产品摄影1</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/产品摄影 (1).png" alt="产品摄影2">
-                    <span>产品摄影2</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/产品摄影 (2).png" alt="产品摄影3">
-                    <span>产品摄影3</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/产品摄影 (3).png" alt="产品摄影4">
-                    <span>产品摄影4</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/产品摄影 (4).png" alt="产品摄影5">
-                    <span>产品摄影5</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案.png" alt="空气净化器1">
-                    <span>净化器</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (1).png" alt="空气净化器2">
-                    <span>宠物友好设计</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (2).png" alt="空气净化器3">
-                    <span>多层过滤技术</span>
-                </div>
-                <div class="product-image-card">
-                    <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (3).png" alt="空气净化器4">
-                    <span>卧室清新空气</span>
-                </div>
-            </div>
+    <section class="section">
+        <h2 class="section-title">产品展示视频</h2>
+        <div class="video-container">
+            <video controls preload="none" poster="产品图/洗发水/产品摄影.png">
+                <source src="产品图/5月31日.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">潘婷丝质顺滑洗发露 · 韩系浴室好物</div>
+        </div>
+        <div class="video-container">
+            <video controls preload="none" poster="产品图/杯子/产品摄影.png">
+                <source src="产品图/6月2日.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">精致杯子 · 生活美学</div>
         </div>
     </section>
 
-    <div id="lightbox" class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div class="lightbox-caption"></div>
-    </div>
-
-    <section id="ai1" class="section bg-gradient-purple">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">AI生视频</h2>
-                <p class="section-desc">AI创作作品展示</p>
-            </div>
-            <div class="ai-content-wrapper">
-                <div class="ai-video-section">
-                    <div class="ai-video-card">
-                        <video controls preload="none" poster="ai生成视频/天台女/kling_20260530_作品_特写镜头_电影质感__3073_0.png">
-                            <source src="ai生成视频/天台女/5月31日 (1).mp4" type="video/mp4">
-                        </video>
-                        <div class="ai-video-badge">
-                            <i class="fas fa-play-circle"></i>
-                            <span>AI生成视频</span>
-                        </div>
-                    </div>
-                    <div class="ai-video-info">
-                        <h3>镜头缓慢向前推进</h3>
-                        <p>电影质感 · 人物特写</p>
-                    </div>
-                </div>
-                <div class="ai-images-section">
-                    <div class="ai-image-card">
-                        <img loading="lazy" src="ai生成视频/天台女/kling_20260530_作品_特写镜头_电影质感__3073_0.png" alt="AI生图1">
-                        <div class="ai-image-overlay">
-                            <span class="ai-image-tag">图片作品</span>
-                            <h4>特写镜头</h4>
-                        </div>
-                    </div>
-                    <div class="ai-image-card">
-                        <img loading="lazy" src="ai生成视频/天台女/kling_20260530_作品_特写镜头_电影质感__3073_1.png" alt="AI生图2">
-                        <div class="ai-image-overlay">
-                            <span class="ai-image-tag">图片作品</span>
-                            <h4>氛围感创作</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="ai2" class="section bg-gradient-blue">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">AI生视频</h2>
-                <p class="section-desc">AI创作作品展示</p>
-            </div>
-            <div class="ai-content-wrapper">
-                <div class="ai-video-section">
-                    <div class="ai-video-card">
-                        <video controls preload="none" poster="ai生成视频/小猫/2f407adcaa0841e8afe2b72cb8982be41780126043931(1).png">
-                            <source src="ai生成视频/小猫/Wan_视频生成_小猫咪从蜷缩状态慢慢舒展身体，先是前爪向前伸，然后站起来，尾巴轻轻摇晃.mp4" type="video/mp4">
-                        </video>
-                        <div class="ai-video-badge">
-                            <i class="fas fa-play-circle"></i>
-                            <span>AI生成视频</span>
-                        </div>
-                    </div>
-                    <div class="ai-video-info">
-                        <h3>小猫咪从蜷缩状态慢慢舒展身体</h3>
-                        <p>可爱治愈 · 细节呈现</p>
-                    </div>
-                </div>
-                <div class="ai-images-section">
-                    <div class="ai-image-card">
-                        <img loading="lazy" src="ai生成视频/小猫/1f0998a888f2433aa7b82344b6c627a6_regulation_logo_firstFrame.png" alt="AI生图1">
-                        <div class="ai-image-overlay">
-                            <span class="ai-image-tag">图片作品</span>
-                            <h4>猫咪特写</h4>
-                        </div>
-                    </div>
-                    <div class="ai-image-card">
-                        <img loading="lazy" src="ai生成视频/小猫/2f407adcaa0841e8afe2b72cb8982be41780126043931(1).png" alt="AI生图2">
-                        <div class="ai-image-overlay">
-                            <span class="ai-image-tag">图片作品</span>
-                            <h4>温馨瞬间</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section">
+        <h2 class="section-title">产品图片展示</h2>
+        <div class="image-grid">
+            <div class="image-item"><img loading="lazy" src="产品图/产品摄影.png" alt="产品1"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (1).png" alt="产品2"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (2).png" alt="产品3"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (3).png" alt="产品4"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (4).png" alt="产品5"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案.png" alt="产品6"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (1).png" alt="产品7"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (2).png" alt="产品8"></div>
+            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (3).png" alt="产品9"></div>
         </div>
     </section>
 
-
-
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">MediaPortfolio</span>
-                </div>
-                <p class="footer-desc">新媒体运营作品集 · 用创意连接世界</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-weibo"></i></a>
-                    <a href="#"><i class="fab fa-weixin"></i></a>
-                    <a href="#"><i class="fab fa-bilibili"></i></a>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <p>&copy; 2024 MediaPortfolio. All rights reserved.</p>
-            </div>
+    <section class="section">
+        <h2 class="section-title">AI创作视频</h2>
+        <div class="video-container">
+            <video controls preload="none" poster="ai生成视频/天台女/kling_20260530_作品_特写镜头_电影质感__3073_0.png">
+                <source src="ai生成视频/天台女/5月31日 (1).mp4" type="video/mp4">
+            </video>
+            <div class="video-title">镜头缓慢向前推进 · 电影质感</div>
         </div>
+        <div class="video-container">
+            <video controls preload="none" poster="ai生成视频/小猫/2f407adcaa0841e8afe2b72cb8982be41780126043931(1).png">
+                <source src="ai生成视频/小猫/Wan_视频生成_小猫咪从蜷缩状态慢慢舒展身体，先是前爪向前伸，然后站起来，尾巴轻轻摇晃.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">小猫咪舒展身体 · 可爱治愈</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 新媒体运营作品集</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
