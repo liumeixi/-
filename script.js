@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const productItems = document.querySelectorAll('.product-item');
+    const productItems = document.querySelectorAll('.product-item, .product-image-card');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxCaption = document.querySelector('.lightbox-caption');
