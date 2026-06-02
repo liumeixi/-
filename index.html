@@ -6,12 +6,12 @@
     <title>新媒体运营作品集</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #FAFAFA; }
         header { background: linear-gradient(135deg, #FF6B9D, #C44569); color: white; padding: 40px 20px; text-align: center; }
         header h1 { font-size: 24px; margin-bottom: 8px; }
         header p { font-size: 14px; opacity: 0.9; }
         
-        .section { padding: 30px 20px; max-width: 800px; margin: 0 auto; }
+        .section { padding: 30px 20px; max-width: 900px; margin: 0 auto; background: white; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .section-title { font-size: 20px; color: #FF6B9D; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #FFE4EC; }
         
         .about-text { font-size: 15px; color: #555; line-height: 1.8; text-indent: 2em; }
@@ -21,16 +21,17 @@
         .video-container video { width: 100%; display: block; }
         .video-title { padding: 12px 15px; background: #FAFAFA; font-size: 14px; color: #333; }
         
-        .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-        .image-item { aspect-ratio: 1; overflow: hidden; border-radius: 8px; }
+        .image-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .image-item { aspect-ratio: 1; overflow: hidden; border-radius: 8px; background: #F5F5F5; }
         .image-item img { width: 100%; height: 100%; object-fit: cover; }
+        .image-caption { padding: 10px; font-size: 12px; color: #666; background: #FAFAFA; }
         
         footer { background: #333; color: #999; text-align: center; padding: 20px; font-size: 12px; }
         
         @media (max-width: 480px) {
             header { padding: 30px 15px; }
             header h1 { font-size: 20px; }
-            .section { padding: 20px 15px; }
+            .section { padding: 20px 15px; border-radius: 8px; }
             .image-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
         }
     </style>
@@ -53,31 +54,82 @@
     <section class="section">
         <h2 class="section-title">产品展示视频</h2>
         <div class="video-container">
-            <video controls preload="none" poster="产品图/洗发水/产品摄影.png">
+            <video controls preload="none" poster="产品图/产品摄影.png">
                 <source src="产品图/5月31日.mp4" type="video/mp4">
             </video>
             <div class="video-title">潘婷丝质顺滑洗发露 · 韩系浴室好物</div>
         </div>
         <div class="video-container">
-            <video controls preload="none" poster="产品图/杯子/产品摄影.png">
+            <video controls preload="none" poster="产品图/产品摄影.png">
                 <source src="产品图/6月2日.mp4" type="video/mp4">
             </video>
-            <div class="video-title">精致杯子 · 生活美学</div>
+            <div class="video-title">产品展示视频2</div>
         </div>
     </section>
 
     <section class="section">
         <h2 class="section-title">产品图片展示</h2>
         <div class="image-grid">
-            <div class="image-item"><img loading="lazy" src="产品图/产品摄影.png" alt="产品1"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (1).png" alt="产品2"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (2).png" alt="产品3"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (3).png" alt="产品4"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/产品摄影 (4).png" alt="产品5"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案.png" alt="产品6"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (1).png" alt="产品7"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (2).png" alt="产品8"></div>
-            <div class="image-item"><img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (3).png" alt="产品9"></div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/产品摄影.png" alt="产品摄影">
+                <div class="image-caption">产品摄影</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/产品摄影 (1).png" alt="产品摄影1">
+                <div class="image-caption">产品摄影1</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/产品摄影 (2).png" alt="产品摄影2">
+                <div class="image-caption">产品摄影2</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/产品摄影 (3).png" alt="产品摄影3">
+                <div class="image-caption">产品摄影3</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/产品摄影 (4).png" alt="产品摄影4">
+                <div class="image-caption">产品摄影4</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/1.png" alt="产品1">
+                <div class="image-caption">产品1</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/2.png" alt="产品2">
+                <div class="image-caption">产品2</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/粉色复古CCD相机产品展示指令.png" alt="CCD相机">
+                <div class="image-caption">粉色复古CCD相机</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/粉色复古CCD相机产品展示指令 (1).png" alt="CCD相机1">
+                <div class="image-caption">粉色复古CCD相机1</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案.png" alt="净化器">
+                <div class="image-caption">空气净化器</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (1).png" alt="净化器1">
+                <div class="image-caption">宠物友好设计</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (2).png" alt="净化器2">
+                <div class="image-caption">多层过滤技术</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/思乐智S400空气净化器创意图生成方案 (3).png" alt="净化器3">
+                <div class="image-caption">卧室清新空气</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/b4c47deef191f2c6d4184d5cd5806520.jpg" alt="图片1">
+                <div class="image-caption">产品图1</div>
+            </div>
+            <div class="image-item">
+                <img loading="lazy" src="产品图/d2938b4d421e666aebc27ad3b880ffa5.jpg" alt="图片2">
+                <div class="image-caption">产品图2</div>
+            </div>
         </div>
     </section>
 
